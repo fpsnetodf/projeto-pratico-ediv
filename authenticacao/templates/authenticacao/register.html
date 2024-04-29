@@ -1,0 +1,34 @@
+{% extends "authenticacao/exemplo.html" %}
+{% load static %}
+
+{% block title %}
+  Página de login
+{% endblock title %}
+{% block css %} 
+  <link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock css %}
+
+{% block conteudo %}
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <form action="" method="get">
+          {{ form.as_p }}
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock conteudo %}
+    
+        
+
+
+{% block extra_scripts %}      
+<script defer>
+  label = document.querySelectorAll('label')
+  label.forEach(e => { 
+    e.classList.add('text-success')
+  });
+</script>
+
+{% endblock extra_scripts %}
